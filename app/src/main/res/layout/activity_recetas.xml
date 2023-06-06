@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".Recetas">
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:layout_width="match_parent"
+                android:id="@+id/volver"
+                android:layout_height="50dp"
+                android:text="Volver a la elección de ingredientes"
+                android:textColor="@color/white"
+                android:onClick="volver">
+
+            </Button>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/nombreReceta1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:textColor="#BB76F1"
+                        android:textSize="20dp" />
+
+                    <ImageView
+                        android:id="@+id/receta1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/boton1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Hacer Receta"
+                    android:enabled="false"
+                    android:visibility="invisible"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/nombreReceta2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:textColor="#BB76F1"
+                        android:textSize="20dp" />
+
+                    <ImageView
+                        android:id="@+id/receta2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/boton2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Hacer Receta"
+                    android:enabled="false"
+                    android:visibility="invisible"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/nombreReceta3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:textColor="#BB76F1"
+                        android:textSize="20dp" />
+
+                    <ImageView
+                        android:id="@+id/receta3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/boton3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Hacer Receta"
+                    android:enabled="false"
+                    android:visibility="invisible"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/nombreReceta4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:textColor="#BB76F1"
+                        android:textSize="20dp" />
+
+                    <ImageView
+                        android:id="@+id/receta4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/boton4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Hacer Receta"
+                    android:enabled="false"
+                    android:visibility="invisible"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/nombreReceta5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:textColor="#BB76F1"
+                        android:textSize="20dp" />
+
+                    <ImageView
+                        android:id="@+id/receta5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/boton5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Hacer Receta"
+                    android:enabled="false"
+                    android:visibility="invisible"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/nombreReceta6"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:textColor="#BB76F1"
+                        android:textSize="20dp" />
+
+                    <ImageView
+                        android:id="@+id/receta6"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/boton6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Hacer Receta"
+                    android:enabled="false"
+                    android:visibility="invisible"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/nombreReceta7"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:textColor="#BB76F1"
+                        android:textSize="20dp" />
+
+                    <ImageView
+                        android:id="@+id/receta7"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/boton7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Hacer Receta"
+                    android:enabled="false"
+                    android:visibility="invisible"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/nombreReceta8"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:textColor="#BB76F1"
+                        android:textSize="20dp" />
+
+                    <ImageView
+                        android:id="@+id/receta8"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/boton8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Hacer Receta"
+                    android:enabled="false"
+                    android:visibility="invisible"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/nombreReceta9"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:textColor="#BB76F1"
+                        android:textSize="20dp" />
+
+                    <ImageView
+                        android:id="@+id/receta9"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/boton9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Hacer Receta"
+                    android:enabled="false"
+                    android:visibility="invisible"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/nombreReceta10"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:textColor="#BB76F1"
+                        android:textSize="20dp" />
+
+                    <ImageView
+                        android:id="@+id/receta10"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/boton10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Hacer Receta"
+                    android:enabled="false"
+                    android:visibility="invisible"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>
