@@ -541,6 +541,23 @@ public class HomeFragment extends Fragment {
                                     1
 
                             ));
+
+                            imageView.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+                                    if (ingredient.equals("Mushroom")) {
+                                        Toast.makeText(getContext(), "Champiñon", Toast.LENGTH_SHORT).show();
+                                    }else if (ingredient.equals("Rice")) {
+                                        Toast.makeText(getContext(), "Arroz", Toast.LENGTH_SHORT).show();
+                                    }else if (ingredient.equals("Pasta")) {
+                                        Toast.makeText(getContext(), "Pasta", Toast.LENGTH_SHORT).show();
+                                    }else if (ingredient.equals("Egg")) {
+                                        Toast.makeText(getContext(), "Huevo", Toast.LENGTH_SHORT).show();
+                                    }
+
+                                    }
+                            });
+
                             if(ingredient.equals("Pasta")) {
                                 imageView.setImageResource(R.drawable.pasta);
                                 itemLayout.addView(imageView);
