@@ -414,11 +414,10 @@ public class HomeFragment extends Fragment {
                         if (response.isSuccessful()) {
                             JsonArray recipesJson = response.body();
 
-                            // Recorrer las recetas obtenidas
+
                             for (JsonElement recipeElement : recipesJson) {
                                 JsonObject recipeObject = recipeElement.getAsJsonObject();
 
-                                // Obtener los datos de la receta
                                 String recipeName = recipeObject.get("title").getAsString();
                                 int recipeId = recipeObject.get("id").getAsInt();
                                 String imagen = recipeObject.get("image").getAsString();
@@ -428,7 +427,7 @@ public class HomeFragment extends Fragment {
                                 imagenes.add(imagen);
 
 
-                                // Ejemplo: Imprimir el nombre de la receta
+
                                 System.out.println(recipeName);
                                 System.out.println(recipeId);
                                 System.out.println(imagen);
@@ -441,14 +440,14 @@ public class HomeFragment extends Fragment {
                                 startActivity(intent);
                             }
                         } else {
-                            // Manejar el caso de respuesta no exitosa de la API
+
                             System.out.println("Error: " + response.code());
                         }
                     }
 
                     @Override
                     public void onFailure(Call<JsonArray> call, Throwable t) {
-                        // Manejar el caso de error en la solicitud
+
                     }
                 });
 
@@ -462,12 +461,12 @@ public class HomeFragment extends Fragment {
                 LayoutInflater inflater = LayoutInflater.from(getContext());
                 View dialogView = inflater.inflate(R.layout.activity_dialog, null);
 
-                // Obtener la referencia al contenedor donde se mostrarán las casillas de verificación
+
                 LinearLayout checkboxContainer = dialogView.findViewById(R.id.checkbox_container);
                 checkboxContainer.setBackgroundColor(Color.parseColor("#FFFFFF"));
 
 
-                // Lista de ingredientes
+
                 ArrayList<String> ingredientList = new ArrayList<>();
                 ingredientList.add("Mushroom");
                 ingredientList.add("Rice");
@@ -486,12 +485,12 @@ public class HomeFragment extends Fragment {
                 builder.setView(dialogView);
                 AlertDialog alertDialog = builder.create();
 
-                // Configurar el botón de confirmación para guardar los ingredientes seleccionados
+
                 Button confirmButton = dialogView.findViewById(R.id.confirmar);
                 confirmButton.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        // Obtener los ingredientes seleccionados
+
                         ArrayList<String> selectedIngredients = new ArrayList<>();
                         for (int i = 0; i < checkboxContainer.getChildCount(); i++) {
                             View view = checkboxContainer.getChildAt(i);
@@ -503,22 +502,16 @@ public class HomeFragment extends Fragment {
                             }
                         }
 
-                        // Mostrar los ingredientes seleccionados en la nueva layout o en HomeFragment
-                        // Aquí puedes implementar la lógica para mostrar los ingredientes seleccionados
-                        // Puedes guardarlos en una variable miembro, enviarlos a otro fragmento o actividad, etc.
-
-                        // Por ejemplo, mostrar los ingredientes seleccionados en un Toast
                         Toast.makeText(getContext(), "Ingredientes seleccionados: " + TextUtils.join(", ", selectedIngredients), Toast.LENGTH_SHORT).show();
 
 
 
                         alertDialog.dismiss();
 
-                        // Crear el nuevo contenedor LinearLayout
                         LinearLayout ingredientContainer = new LinearLayout(getContext());
                         ingredientContainer.setOrientation(LinearLayout.HORIZONTAL);
 
-                    // Agregar margen al contenedor (opcional)
+
                         LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(
                                 LinearLayout.LayoutParams.MATCH_PARENT,
                                 LinearLayout.LayoutParams.WRAP_CONTENT
@@ -529,9 +522,9 @@ public class HomeFragment extends Fragment {
 
                         System.out.println(selectedIngredients);
 
-                    // Recorrer los ingredientes seleccionados
+
                         for (String ingredient : selectedIngredients) {
-                            // Crear un nuevo LinearLayout para contener la imagen y el checkbox
+
                             LinearLayout itemLayout = new LinearLayout(getContext());
                             itemLayout.setOrientation(LinearLayout.VERTICAL);
                             itemLayout.setLayoutParams(new LinearLayout.LayoutParams(
@@ -540,7 +533,7 @@ public class HomeFragment extends Fragment {
                                     1
                             ));
 
-                            // Crear ImageView para la imagen
+
                             ImageView imageView = new ImageView(getContext());
                             imageView.setLayoutParams(new LinearLayout.LayoutParams(
                                     LinearLayout.LayoutParams.WRAP_CONTENT,
@@ -549,23 +542,23 @@ public class HomeFragment extends Fragment {
 
                             ));
                             if(ingredient.equals("Pasta")) {
-                                imageView.setImageResource(R.drawable.pasta); // Asignar imagen según corresponda
+                                imageView.setImageResource(R.drawable.pasta);
                                 itemLayout.addView(imageView);
                             }
                             if(ingredient.equals("Egg")) {
-                                imageView.setImageResource(R.drawable.huevo); // Asignar imagen según corresponda
+                                imageView.setImageResource(R.drawable.huevo);
                                 itemLayout.addView(imageView);
                             }
                             if(ingredient.equals("Mushroom")) {
-                                imageView.setImageResource(R.drawable.champi); // Asignar imagen según corresponda
+                                imageView.setImageResource(R.drawable.champi);
                                 itemLayout.addView(imageView);
                             }
                             if(ingredient.equals("Rice")) {
-                                imageView.setImageResource(R.drawable.arroz); // Asignar imagen según corresponda
+                                imageView.setImageResource(R.drawable.arroz);
                                 itemLayout.addView(imageView);
                             }
 
-                            // Crear CheckBox para el ingrediente
+
                             CheckBox checkBox = new CheckBox(getContext());
                             checkBox.setLayoutParams(new LinearLayout.LayoutParams(
                                     LinearLayout.LayoutParams.MATCH_PARENT,
@@ -579,11 +572,11 @@ public class HomeFragment extends Fragment {
 
                             chs.add(checkBox);
 
-                            // Agregar el LinearLayout al contenedor
+
                             ingredientContainer.addView(itemLayout);
                         }
 
-                    // Agregar el contenedor de ingredientes al layout principal
+
                         LinearLayout ingredientLayout = rootView.findViewById(R.id.ingredientLayout);
                         ingredientLayout.addView(ingredientContainer);
 
