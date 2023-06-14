@@ -399,6 +399,9 @@ public class HomeFragment extends Fragment {
 
                 System.out.println(selectedIngredients);
 
+                if (selectedIngredients.isEmpty()){
+                    Toast.makeText(getContext(), "Selecciona ingredientes", Toast.LENGTH_SHORT).show();
+                }
 
                 String apiKey = "f4a9735dddbe4a5f8caad98b7f459e34";
                 String ingredients = TextUtils.join(",", selectedIngredients);
